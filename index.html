@@ -1,0 +1,438 @@
+<<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoes - MakeUp & Beauty | Boutique</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --nude-light: #f9f5f2;
+            --nude-medium: #e8d5c4;
+            --rose-dust: #d4a373;
+            --charcoal: #333333;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--nude-light);
+            color: var(--charcoal);
+            line-height: 1.6;
+        }
+
+        /* Encabezado y Logo */
+        header {
+            background-color: var(--white);
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 1px solid var(--nude-medium);
+        }
+
+        .logo-container img {
+            max-width: 180px;
+            height: auto;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            letter-spacing: 2px;
+            color: var(--charcoal);
+            text-transform: uppercase;
+        }
+
+        .subtitle {
+            font-style: italic;
+            font-size: 0.9rem;
+            color: var(--rose-dust);
+        }
+
+        /* Contenedor Principal */
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* Grid de Productos */
+        .catalog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        /* Tarjeta de Producto */
+        .product-card {
+            background: var(--white);
+            border-radius: 5px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 350px;
+            overflow: hidden;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .product-info {
+            padding: 20px;
+            text-align: center;
+            flex-grow: 1;
+        }
+
+        .product-info h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--charcoal);
+        }
+
+        .product-description {
+            font-size: 0.85rem;
+            color: #777;
+            margin-bottom: 15px;
+            height: 45px;
+            overflow: hidden;
+        }
+
+        .details-list {
+            list-style: none;
+            font-size: 0.8rem;
+            color: var(--rose-dust);
+            margin-bottom: 20px;
+            border-top: 1px solid var(--nude-light);
+            padding-top: 10px;
+        }
+
+        .btn-view {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: var(--charcoal);
+            color: var(--white);
+            text-decoration: none;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: background 0.3s ease;
+        }
+
+        .btn-view:hover {
+            background-color: var(--rose-dust);
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            font-size: 0.8rem;
+            color: #999;
+            background: var(--white);
+            margin-top: 50px;
+        }
+
+        /* Ajustes para Celulares */
+        @media (max-width: 600px) {
+            h1 { font-size: 1.4rem; }
+            .product-image { height: 300px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="logo.jpeg" alt="Logo Alexandra Crespin">
+        </div>
+        <h1>Shoes - MakeUp & Beauty</h1>
+        <p class="subtitle">Elegancia y confort en cada paso</p>
+    </header>
+
+    <div class="container">
+        <section class="catalog-grid">
+
+            <article class="product-card">
+                <div class="product-image">
+                    <img src="11.jpeg" alt="Sandalia Texturizada Oro">
+                </div>
+                <div class="product-info">
+                    <h3>Golden Studded</h3>
+                    <p class="product-description">Sandalia plana con textura artesanal y detalles dorados.</p>
+                    <ul class="details-list">
+                        <li>Material: Textil premium</li>
+                        <li>Detalle: Tachas esféricas</li>
+                        <li>Suela: Antideslizante</li>
+                    </ul>
+                    <a href="#" class="btn-view">Ver Disponibilidad</a>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <div class="product-image">
+                    <img src="22.jpeg" alt="Sandalia Hebilla">
+                </div>
+                <div class="product-info">
+                    <h3>Classic Buckle</h3>
+                    <p class="product-description">Diseño minimalista con hebilla ajustable para un look fresco.</p>
+                    <ul class="details-list">
+                        <li>Material: Yute natural</li>
+                        <li>Correa: Cuero sintético</li>
+                        <li>Estilo: Casual elegante</li>
+                    </ul>
+                    <a href="#" class="btn-view">Ver Disponibilidad</a>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <div class="product-image">
+                    <img src="33.jpeg" alt="Sandalia Rope">
+                </div>
+                <div class="product-info">
+                    <h3>Nature Weave</h3>
+                    <p class="product-description">Textura de cuerda trenzada ideal para días de sol.</p>
+                    <ul class="details-list">
+                        <li>Acabado: Tejido rústico</li>
+                        <li>Confort: Plantilla acolchada</li>
+                        <li>Tallas: 35 - 40</li>
+                    </ul>
+                    <a href="#" class="btn-view">Ver Disponibilidad</a>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <div class="product-image">
+                    <img src="44.jpeg" alt="Sandalia Moño">
+                </div>
+                <div class="product-info">
+                    <h3>Lady Bow</h3>
+                    <p class="product-description">El toque femenino perfecto con un lazo sobredimensionado.</p>
+                    <ul class="details-list">
+                        <li>Color: Café Terracota</li>
+                        <li>Detalle: Moño de seda</li>
+                        <li>Uso: Diario / Eventos</li>
+                    </ul>
+                    <a href="#" class="btn-view">Ver Disponibilidad</a>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <div class="product-image">
+                    <img src="160.jpeg" alt="Sandalia Silver Tiras">
+                </div>
+                <div class="product-info">
+                    <h3>Silver Night</h3>
+                    <p class="product-description">Tiras finas plateadas que realzan la silueta del pie.</p>
+                    <ul class="details-list">
+                        <li>Color: Plata Metálico</li>
+                        <li>Ajuste: Tiras cruzadas</li>
+                        <li>Suela: Delgada y ligera</li>
+                    </ul>
+                    <a href="#" class="btn-view">Ver Disponibilidad</a>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <div class="product-image">
+                    <img src="150.jpeg" alt="Sandalia Silver Tiras">
+                </div>
+                <div class="product-info">
+                    <h3>Silver Night</h3>
+                    <p class="product-description">Tiras finas plateadas que realzan la silueta del pie.</p>
+                    <ul class="details-list">
+                        <li>Color: Plata Metálico</li>
+                        <li>Ajuste: Tiras cruzadas</li>
+                        <li>Suela: Delgada y ligera</li>
+                    </ul>
+                    <a href="#" class="btn-view">Ver Disponibilidad</a>
+                </div>
+            </article>
+                
+                
+                <article class="product-card">
+                <div class="product-image">
+                    <img src="170.jpeg" alt="Sandalia Silver Tiras">
+                </div>
+                <div class="product-info">
+                    <h3>Silver Night</h3>
+                    <p class="product-description">Tiras finas plateadas que realzan la silueta del pie.</p>
+                    <ul class="details-list">
+                        <li>Color: Plata Metálico</li>
+                        <li>Ajuste: Tiras cruzadas</li>
+                        <li>Suela: Delgada y ligera</li>
+                    </ul>
+                    <a href="#" class="btn-view">Ver Disponibilidad</a>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <div class="product-image">
+                    <img src="140.jpeg" alt="Sandalia Silver Tiras">
+                </div>
+                <div class="product-info">
+                    <h3>Silver Night</h3>
+                    <p class="product-description">Tiras finas plateadas que realzan la silueta del pie.</p>
+                    <ul class="details-list">
+                        <li>Color: Plata Metálico</li>
+                        <li>Ajuste: Tiras cruzadas</li>
+                        <li>Suela: Delgada y ligera</li>
+                    </ul>
+                    <a href="#" class="btn-view">Ver Disponibilidad</a>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <div class="product-image">
+                    <img src="55.jpeg" alt="Sandalia H Designer">
+                </div>
+                <div class="product-info">
+                    <h3>Ivory Glam</h3>
+                    <p class="product-description">Corte geométrico moderno en tono marfil sofisticado.</p>
+                    <ul class="details-list">
+                        <li>Material: Cuero vegano</li>
+                        <li>Color: Nude Marfil</li>
+                        <li>Punta: Cuadrada tendencia</li>
+                    </ul>
+                    <a href="#" class="btn-view">Ver Disponibilidad</a>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <div class="product-image">
+                    <img src="66.jpeg" alt="Sandalia Perlas">
+                </div>
+                <div class="product-info">
+                    <h3>Pearl Essence</h3>
+                    <p class="product-description">Elegancia pura con incrustaciones de perlas delicadas.</p>
+                    <ul class="details-list">
+                        <li>Detalle: Perlas nacaradas</li>
+                        <li>Base: Tono piel</li>
+                        <li>Estilo: Romántico</li>
+                    </ul>
+                    <a href="#" class="btn-view">Ver Disponibilidad</a>
+                
+                </div>
+            </article>
+
+            <article class="product-card">
+                <div class="product-image">
+                    <img src="77.jpeg" alt="Sandalia Silver Tiras">
+                </div>
+                <div class="product-info">
+                    <h3>Silver Night</h3>
+                    <p class="product-description">Tiras finas plateadas que realzan la silueta del pie.</p>
+                    <ul class="details-list">
+                        <li>Color: Plata Metálico</li>
+                        <li>Ajuste: Tiras cruzadas</li>
+                        <li>Suela: Delgada y ligera</li>
+                    </ul>
+                    <a href="#" class="btn-view">Ver Disponibilidad</a>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <div class="product-image">
+                    <img src="88.jpeg" alt="Sandalia Trenzada">
+                </div>
+                <div class="product-info">
+                    <h3>Soft Knot</h3>
+                    <p class="product-description">Nudo entrelazado de máxima suavidad y confort.</p>
+                    <ul class="details-list">
+                        <li>Textura: Acolchada</li>
+                        <li>Color: Beige arena</li>
+                        <li>Horma: Cómoda</li>
+                    </ul>
+                    <a href="#" class="btn-view">Ver Disponibilidad</a>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <div class="product-image">
+                    <img src="99.jpeg" alt="Sandalia Romana Oro">
+                </div>
+                <div class="product-info">
+                    <h3>Roman Empress</h3>
+                    <p class="product-description">Estilo gladiadora moderna con amarre al tobillo en oro.</p>
+                    <ul class="details-list">
+                        <li>Color: Dorado brillante</li>
+                        <li>Tipo: Lace-up (amarrar)</li>
+                        <li>Ocasión: Fiesta / Playa</li>
+                    </ul>
+                    <a href="#" class="btn-view">Ver Disponibilidad</a>
+                </div>
+            </article>
+
+            
+
+        </section>
+    </div>
+
+    
+<style>
+    .boton-ws {
+        position: fixed;
+        width: 60px;
+        height: 60px;
+        bottom: 25px;
+        right: 25px;
+        background-color: #25d366;
+        color: #FFF;
+        border-radius: 50px;
+        text-align: center;
+        font-size: 30px;
+        box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        transition: transform 0.3s ease;
+    }
+
+    .boton-ws:hover {
+        transform: scale(1.1);
+        background-color: #20ba5a;
+        color: #FFF;
+    }
+
+    /* Icono simple si no usas librerías de iconos */
+    .boton-ws::before {
+        content: "💬"; 
+        font-size: 30px;
+    }
+</style>
+
+<a href="https://wa.me/+50372076741" class="boton-ws" target="_blank"></a>
+
+
+
+
+    <footer>
+        <p>&copy; 2026 Shoes - MakeUp & Beauty. Todos los derechos reservados.</p>
+        <p>Diseño exclusivo para Alexandra Crespin</p>
+    </footer>
+
+</body>
+</html>
